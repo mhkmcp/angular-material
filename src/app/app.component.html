@@ -85,3 +85,44 @@
   <mat-icon color="warn">schedule</mat-icon>
   <!-- Icons are from https://fonts.google.com/icons?selected=Material+Icons -->
 </section>
+
+<section>
+  <hr>
+  <h2>Badge</h2>
+  <div>
+    <span matBadge="3">Unread Messages</span>
+  </div>
+  <div>
+    <span matBadge="3" matBadgePosition="below before">Unread Messages</span>
+  </div>
+  <div>
+    <span matBadge="3" matBadgePosition="below after">Unread Messages</span>
+  </div>
+  <div>
+    <span matBadge="3" matBadgePosition="above before">Unread Messages</span>
+  </div>
+  <div>
+    <span matBadge="3" matBadgeSize="small">Unread Messages</span>
+  </div>
+  <div>
+    <span matBadge="3" matBadgeSize="medium">Unread Messages</span>
+  </div>
+  <div>
+    <span matBadge="3" matBadgeSize="large">Unread Messages</span>
+  </div>
+  <div>
+    <span matBadge="3" matBadgeColor="warn">Unread Messages</span>
+  </div>
+  <div>
+    <span matBadge="3" matBadgeColor="primary">Unread Messages</span>
+  </div>
+  <div>
+    <span matBadge="3" matBadgeColor="accent" matBadgeOverlap="false">Unread Messages</span>
+  </div>
+  <div>
+    <span [matBadge]="notifications">Notifications</span>
+  </div>
+  <div>
+    <span [matBadge]="notifications" [matBadgeHidden]="notifications === 0">Notifications</span>
+  </div>
+</section>
