@@ -48,3 +48,31 @@
     </div>
   </div>
 </section>
+
+<section>
+  <hr>
+  <h2>Button Toggle</h2>
+  <mat-button-toggle #toggleBtn>Toggle</mat-button-toggle>
+  {{ toggleBtn.checked }}
+  <br>
+  <mat-button-toggle #toggleBtn2 checked>Toggle</mat-button-toggle>
+  {{ toggleBtn2.checked }}
+  <mat-button-toggle  disableRipple>Toggle</mat-button-toggle>
+  <mat-button-toggle  disableRipple disabled>Toggle</mat-button-toggle>
+  <br>
+  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
+    <mat-button-toggle value="angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="react">React</mat-button-toggle>
+    <mat-button-toggle value="vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ toggleGroup.value }}
+  <br>
+
+  <mat-button-toggle-group #toggleGroup2="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="react">React</mat-button-toggle>
+    <mat-button-toggle value="vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ toggleGroup2.value }}
+
+</section>
