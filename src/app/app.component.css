@@ -7,3 +7,14 @@ button {
 section > div {
     margin: 3rerm;
 }
+
+mat-sidenav-container {
+    height: 300px;
+}
+mat-sidenav-content, mat-sidenav {
+    padding: 16px;
+}
+mat-sidenav {
+    background-color: coral;
+    width: 200px;
+}
