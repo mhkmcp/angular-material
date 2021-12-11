@@ -151,3 +151,46 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 </section>
+
+<section>
+  <hr>
+  <h2>Menu</h2>
+  <mat-menu #appMenu="matMenu" xPosition="after" yPosition="below">
+    <button mat-menu-item [matMenuTriggerFor]="frontSubMenu">Front End</button>
+    <button mat-menu-item [matMenuTriggerFor]="backSubMenu">Back End</button>
+  </mat-menu>
+  <button class="btncenter" mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+
+  <mat-menu #frontSubMenu="matMenu">
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Vue</button>
+  </mat-menu>
+
+  <mat-menu #backSubMenu="matMenu">
+    <button mat-menu-item>Django</button>
+    <button mat-menu-item>Ruby on Rails</button>
+    <button mat-menu-item>Laravel</button>
+    <button mat-menu-item>Spring</button>
+  </mat-menu>
+
+  <hr>
+  <mat-menu #lazyMenu="matMenu">
+    <ng-template matMenuContent let-name="name" let-hobby="hobby">
+      <button mat-menu-item >Settings</button>
+      <button mat-menu-item >Hobby is {{ hobby }}</button>
+      <button mat-menu-item >Log out {{ name }}</button>
+    </ng-template>
+  </mat-menu>
+  <button 
+    mat-raised-button 
+    [matMenuTriggerData]="{'name': 'Humayun', 'hobby': 'Football'}" 
+    [matMenuTriggerFor]="lazyMenu"
+    >Humayun</button>
+
+  <button 
+    mat-raised-button 
+    [matMenuTriggerData]="{'name': 'Kabir', 'hobby': 'Teaching'}"
+    [matMenuTriggerFor]="lazyMenu"
+    >Kabir</button>
+</section>
