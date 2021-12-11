@@ -21,3 +21,7 @@ mat-sidenav {
 .btncenter {
     margin: 6rem;
 }
+mat-grid-tile {
+    color: white;
+    background-color: cornflowerblue;
+}
