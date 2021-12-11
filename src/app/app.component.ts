@@ -11,6 +11,7 @@ export class AppComponent {
   showSpinner = false;
 
   opened = false;
+  selectedValue = '';
 
   loadData() {
     this.showSpinner = true;

@@ -387,3 +387,26 @@
     <mat-hint algign="end">Min 5 characters</mat-hint>
   </mat-form-field>
 </section>
+
+<section>
+  <hr>
+  <h2>Select</h2>
+  <mat-form-field>
+    <mat-label>Topic</mat-label>
+    <mat-select [(value)]="selectedValue">
+      <!-- multi can be used to select multiple options -->
+      <mat-option>None</mat-option>
+      <mat-optgroup label="Web">
+        <mat-option value="angular">Angular</mat-option>
+        <mat-option value="react">React</mat-option>
+        <mat-option value="vue">Vue</mat-option>
+      </mat-optgroup>
+      <mat-optgroup label="Mobile">
+        <mat-option value="ionic">Ionic</mat-option>
+        <mat-option value="reactnative">React Native</mat-option>
+        <mat-option value="flutter">Flutter</mat-option>
+      </mat-optgroup>
+    </mat-select>
+  </mat-form-field>
+ <span *ngIf="selectedValue"> You have selecte: {{ selectedValue }}</span>
+</section>
