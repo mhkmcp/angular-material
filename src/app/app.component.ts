@@ -23,4 +23,8 @@ export class AppComponent {
     console.log(state);
   }
 
+  logChange(selectedIndex:any) {
+    console.log(selectedIndex);
+  }
+
 }

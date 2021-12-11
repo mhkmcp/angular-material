@@ -298,3 +298,14 @@
     </mat-card-actions>
   </mat-card>
 </section>
+
+<section>
+  <hr>
+  <h2>Tabs</h2>
+  <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+    <mat-tab label="angular">Angular</mat-tab>
+    <mat-tab label="react">React</mat-tab>
+    <mat-tab label="vue">Vue</mat-tab>
+  </mat-tab-group>
+  {{ tabRef.selectedIndex }}
+</section>
