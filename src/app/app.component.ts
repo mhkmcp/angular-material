@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   ]
 
   myFormControl = new FormControl();
-  filteredOptions: Observable<string[]>;
+  // filteredOptions: Observable<string[]>;
 
   displayFn(option:any) {
     return option ? option.name : undefined;
@@ -47,15 +47,15 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(){
-    this.filteredOptions = this.myFormControl.valueChanges.pipe(
-      startWith(''),
-      map(value=>this._filter(value))
-    )
+    // this.filteredOptions = this.myFormControl.valueChanges.pipe(
+    //   startWith(''),
+    //   map(value=>this._filter(value))
+    // )
   }
 
-  private _filter(value:string):string[]{
-    const filterValue = value.toLocaleLowerCase();
-    return this.options.filter(option=>option.toLocaleLowerCase().includes(filterValue))
-  }
+  // private _filter(value:string):string[]{
+  //   const filterValue = value.toLocaleLowerCase();
+  //   return this.options.filter(option=>option.toLocaleLowerCase().includes(filterValue))
+  // }
 
 }
