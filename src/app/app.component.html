@@ -459,3 +459,15 @@
     </mat-radio-button>
   </mat-radio-group>
 </section>
+
+<section>
+  <hr>
+  <h2>Date Picker</h2>
+  <mat-form-field>
+    <!-- [min]="minDate" [max]="maxDate" -->
+    <input matInput [matDatepicker]="myDatePicker" [matDatepickerFilter]="dateFilter">
+    <mat-datepicker-toggle matSuffix [for]="myDatePicker"></mat-datepicker-toggle>
+    <!-- startView: year, multi-year  -->
+    <mat-datepicker #myDatePicker ></mat-datepicker>
+  </mat-form-field>
+</section>
